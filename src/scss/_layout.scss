@@ -1,0 +1,13 @@
+.site-wrap {
+	max-width: 75rem;
+	margin: 0 auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+.entry-header {
+	display: none;
+}
+.entry-content > * + *,
+.wp-block-group__inner-container > * + * {
+	margin-top: var(--flow-space);
+}

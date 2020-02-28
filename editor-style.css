@@ -1,0 +1,114 @@
+:root {
+	/* Colors */
+	--color-primary: #50B1B6;
+	--color-secondary: #426d80;
+	--color-dark-secondary: #556471;
+	--color-light: #e8e1d4;
+	--color-dark: #565e67;
+	--color-light-gray: #E9E9E9;
+	--color-gray: #C2C0BF;
+	--color-dark-gray: #565E66;
+	--color-white: #fff;
+	--color-black: #000;
+	/* Typography */
+	--font-body: 'Dosis Medium', sans-serif;
+	--font-heading: 'Lato Light', sans-serif;
+	--font-heading-alt: 'Calligraffitti', cursive;
+	/* Sizes */
+	--size-300: .75rem;
+	--size-400: 1rem;
+	--size-600: 1.777rem;
+	--size-700: 2.369rem;
+	--size-800: 3.157rem;
+	--size-900: 4.209rem;
+}
+/* Typography */
+body {
+	font-family: var(--font-body);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-heading);
+	font-weight: normal;
+}
+.is-style-cursive {
+	font-family: var(--font-heading-alt);
+}
+.is-style-uppercase {
+	text-transform: uppercase;
+}
+h1 {
+	font-size: var(--size-900);
+}
+h2 {
+	font-size: var(--size-800);
+}
+h3 {
+	font-size: var(--size-700);
+}
+h4 {
+	font-size: var(--size-600);
+}
+h5 {
+	font-size: var(--size-400);
+}
+h6 {
+	font-size: var(--size-300);
+}
+.has-small-font-size {
+	font-size: var(--size-300);
+}
+.has-regular-font-size {
+	font-size: var(--size-400);
+}
+.has-large-font-size {
+	font-size: var(--size-700);
+}
+.has-huge-font-size {
+	font-size: var(--size-800);
+}
+.has-extra-huge-font-size {
+	font-size: var(--size-900);
+}
+/* Colors */
+.has-primary-color {
+	color: var(--color-);
+}
+.has-secondary-color {
+	color: var(--color-secondary);
+}
+.has-dark-secondary-color {
+	color: var(--color-dark-secondary);
+}
+.has-light-color {
+	color: var(--color-light);
+}
+.has-dark-color {
+	color: var(--color-dark);
+}
+.has-light-gray-color {
+	color: var(--color-light-gray);
+}
+.has-gray-color {
+	color: var(--color-gray);
+}
+.has-dark-gray-color {
+	color: var(--color-dark-gray);
+}
+.has-white-color {
+	color: var(--color-white);
+}
+.has-black-color {
+	color: var(--color-black);
+}
+
+
+/* Editor Interface Styling */
+/* Main column width */
+.wp-block {
+	max-width: 150ch;
+}
