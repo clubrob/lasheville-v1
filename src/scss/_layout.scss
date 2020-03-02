@@ -1,3 +1,6 @@
+body {
+	padding-top: 4rem;
+}
 .site-wrap {
 	max-width: 75rem;
 	margin: 0 auto;
@@ -7,7 +10,12 @@
 .entry-header {
 	display: none;
 }
-.entry-content > * + *,
-.wp-block-group__inner-container > * + * {
-	margin-top: var(--flow-space);
+// .entry-content * + * {
+// 	margin-top: var(--flow-space);
+// }
+.entry-content {
+	max-width: 60rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
 }

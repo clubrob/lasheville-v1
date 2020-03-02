@@ -12,7 +12,7 @@
 	--color-black: #000;
 	/* Typography */
 	--font-body: 'Dosis Medium', sans-serif;
-	--font-heading: 'Lato Light', sans-serif;
+	--font-heading: 'Lato', sans-serif;
 	--font-heading-alt: 'Calligraffitti', cursive;
 	/* Sizes */
 	--size-300: .75rem;
@@ -33,7 +33,7 @@ h4,
 h5,
 h6 {
 	font-family: var(--font-heading);
-	font-weight: normal;
+	font-weight: 300;
 }
 .is-style-cursive {
 	font-family: var(--font-heading-alt);
@@ -104,6 +104,33 @@ h6 {
 }
 .has-black-color {
 	color: var(--color-black);
+}
+
+.wp-block-button__link {
+	border: none;
+	border-radius: .5rem;
+	box-shadow: none;
+	color: var(--white);
+	background-color: var(--color-primary);
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1rem;
+	margin: 0;
+	padding: .5rem 1rem;
+	text-align: center;
+	text-decoration: none;
+	overflow-wrap: break-word;
+	font-family: var(--font-heading);
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.is-style-full-width-button a {
+	width: 100%;
+}
+
+/* Utilities */
+.mt-0 {
+	margin-top: 0 !important;
 }
 
 

@@ -14,4 +14,22 @@ wp.domReady( () => {
 			label: 'Uppercase',
 		}
 	]);
+	wp.blocks.unregisterBlockStyle(
+		'core/button',
+		[ 'default', 'outline', 'squared', 'fill' ]
+	);
+	wp.blocks.registerBlockStyle(
+		'core/button',
+		[
+			{
+				name: 'default',
+				label: 'Default',
+				isDefault: true,
+			},
+			{
+				name: 'full-width-button',
+				label: 'Full Width',
+			}
+		]
+	);
 } );

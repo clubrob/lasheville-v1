@@ -36,3 +36,10 @@
 .mt-0 {
 	margin-top: 0 !important;
 }
+.mt {
+	margin-top: var(--flow-space);
+}
+.mx-deep {
+	margin-left: var(--size-800);
+	margin-right: var(--size-800);
+}
