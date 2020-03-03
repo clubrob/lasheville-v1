@@ -205,8 +205,8 @@ add_action('after_setup_theme', 'lasheville_v1_content_width', 0);
 function lasheville_v1_widgets_init()
 {
     register_sidebar(array(
-        'name' => esc_html__('Sidebar', 'lasheville-v1'),
-        'id' => 'sidebar-1',
+        'name' => esc_html__('Feature Banner', 'lasheville-v1'),
+        'id' => 'topbanner-1',
         'description' => esc_html__('Add widgets here.', 'lasheville-v1'),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget' => '</section>',

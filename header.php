@@ -16,7 +16,6 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
 	<?php wp_head(); ?>
 </head>
 
@@ -25,6 +24,8 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'lasheville-v1' ); ?></a>
 
 	<header id="masthead" class="site-header">
+		<?php get_sidebar(); ?>
+
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
