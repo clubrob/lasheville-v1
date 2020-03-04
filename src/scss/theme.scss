@@ -9,8 +9,10 @@ html {
 	font-size: 1.1rem;
 }
 body {
+	color: var(--color-dark-gray);
 	font-family: var(--font-body);
 	line-height: 1.625;
+	overflow-x: hidden;
 }
 h1,
 h2,

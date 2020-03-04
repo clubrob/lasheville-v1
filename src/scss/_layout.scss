@@ -1,5 +1,5 @@
 body {
-	padding-top: 4rem;
+	padding-top: 5rem;
 }
 .site-wrap {
 	max-width: 75rem;
@@ -19,3 +19,138 @@ body {
 	margin-right: auto;
 	margin-top: 0;
 }
+
+/* Services Page */
+.services-menu-list {
+	li {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		&:before {
+			content: '';
+			display: block;
+			border-bottom: 2px dotted var(--color-gray);
+			flex: 1;
+			order: 1;
+			margin-bottom: 6px;
+		}
+		strong:first-of-type {
+			order: 0;
+		}
+		strong:last-of-type {
+			margin-top: 0;
+			order: 2;
+		}
+	}
+}
+.facial-menu-item {
+	> div {
+		h5 {
+			font-weight: 700;
+			margin-bottom: 0;
+		}
+		p:first-of-type {
+			margin-top: 0;
+		}
+	}
+}
+
+.site-footer {
+	background-color: var(--color-gray);
+	* {
+		color: var(--color-white);
+	}
+	.footer-wrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 60rem;
+		width: 100%;
+		margin: 0 auto;
+		padding-top: var(--size-700);
+		padding-bottom: var(--size-700);
+		.footer-info {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			flex: 1;
+			p:first-child {
+				margin-bottom: var(--size-500);
+			}
+		}
+		.footer-nav {
+			display: flex;
+			justify-content: center;
+			a {
+				display: block;
+				font-weight: 700;
+				text-decoration: none;
+				font-size: var(--size-500);
+				padding: .4rem 0;
+			}
+			.footer-nav-left {
+				text-align: right;
+				padding: 0 1rem .5rem 1rem;
+			}
+			.footer-nav-right {
+				padding:  0 1rem .5rem 1rem;
+			}
+		}
+		.footer-social {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			justify-content: center;
+			flex: 1;
+			h5 {
+				width: 100%;
+				text-align: center;
+				font-size: var(--size-500);
+				font-weight: 700;
+				margin-bottom: 1em;
+			}
+			ul {
+				display: flex;
+				justify-content: space-around;
+				list-style: none;
+				margin: 0 auto;
+				padding: 0;
+				width: 80%;
+				li {
+					display: block;
+					img {
+						width: var(--size-600);
+						height: var(--size-600);
+					}
+				}
+			}
+		}
+	}
+}
+.footer-back-top {
+    display: flex;
+    justify-content: center;
+	background: var(--color-primary);
+    .back-top-button {
+      display: flex;
+      align-items: center;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      color: white;
+      font-size: 1.1rem;
+	  font-weight: 700;
+	  font-family: var(--font-heading);
+	  text-transform: uppercase;
+	  margin: 0 auto;
+	  padding: .5rem;
+      &:after {
+        content: url(./assets/images/icons/arrow-up.svg);
+        display: inline-block;
+        width: 1.25em;
+        height: 1.25em;
+        background-size: 1.25em 1.25em;
+        filter: invert(100%);
+      }
+    }
+  }
