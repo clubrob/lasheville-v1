@@ -11,6 +11,9 @@
 .has-regular-font-size {
 	font-size: var(--size-400);
 }
+.has-medium-font-size {
+	font-size: var(--size-500);
+}
 .has-large-font-size {
 	font-size: var(--size-700);
 }
@@ -43,8 +46,8 @@
 .has-gray-color {
 	color: var(--color-gray);
 }
-.has-dark-gray-color {
-	color: var(--color-dark-gray);
+.has-dark-color {
+	color: var(--color-dark);
 }
 .has-white-color {
 	color: var(--color-white);
@@ -73,8 +76,8 @@
 .has-gray-background-color {
 	background-color: var(--color-gray);
 }
-.has-dark-gray-background-color {
-	background-color: var(--color-dark-gray);
+.has-dark-background-color {
+	background-color: var(--color-dark);
 }
 .has-white-background-color {
 	background-color: var(--color-white);
@@ -112,77 +115,91 @@
 
 .testimonials-block {
 	transition: 300ms;
-	* {
-	  color: white !important;
+	*:not(h3) {
+		color: white;
 	}
 	.testimonials-header {
-	  text-align: center;
-	  margin: 0;
-	  width: 100%;
-	  h3 {
-		font-size: 1.8rem;
-		display: inline-block;
-		padding: 1.25rem 0 0 0;
-	  }
+		text-align: center;
+		margin: 0;
+		width: 100%;
+		h3 {
+			font-size: 1.8rem;
+			display: inline-block;
+			padding: 1.25rem 0 0 0;
+		}
 	}
 	.testimonials-block-slider {
-	  > div {
+		> div {
 		position: relative;
 		margin: 0 auto;
 		width: 100%;
 		transition:300ms;
-		.jetpack-testimonial-shortcode {
-		  position: relative;
-		  overflow: visible;
-		  .testimonial-entry {
-			float: none;
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			margin:0 auto;
-			transition: 300ms;
-			text-align: center;
-			opacity: 0;
-			visibility: hidden;
-			padding: 0 2.5rem;
-			z-index: 0;
-			&.active { // this is how we transition the slides in/out
-			  opacity: 1;
-			  visibility: visible;
+			.jetpack-testimonial-shortcode {
+				position: relative;
+				overflow: visible;
+				.testimonial-entry {
+					float: none;
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					margin:0 auto;
+					transition: 300ms;
+					text-align: center;
+					opacity: 0;
+					visibility: hidden;
+					padding: 0 2.5rem;
+					z-index: 0;
+					&.active { // this is how we transition the slides in/out
+						opacity: 1;
+						visibility: visible;
+					}
+					.testimonial-entry-title {
+						font-size: 1.1rem;
+					}
+				}
 			}
-			.testimonial-entry-title {
-			  font-size: 1.1rem;
+			.testimonials-slider-nav {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				position: absolute;
+				left: 0;
+				top: 1.5rem;
+				width: 100%;
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				z-index: 0;
+				li {
+				button {
+					cursor: pointer;
+					background: transparent;
+					border: 0;
+					svg {
+					width: 1.5rem;
+					height: 1.5rem;
+					}
+				}
+				}
+				#prev-slide, #next-slide {
+				padding: 0;
+				}
 			}
-		  }
 		}
-		.testimonials-slider-nav {
-		  display: flex;
-		  justify-content: space-between;
-		  align-items: center;
-		  position: absolute;
-		  left: 0;
-		  top: 1.5rem;
-		  width: 100%;
-		  list-style: none;
-		  padding: 0;
-		  margin: 0;
-		  z-index: 0;
-		  li {
-			button {
-			  cursor: pointer;
-			  background: transparent;
-			  border: 0;
-			  svg {
-				width: 1.5rem;
-				height: 1.5rem;
-			  }
-			}
-		  }
-		  #prev-slide, #next-slide {
-			padding: 0;
-		  }
-		}
-	  }
 	}
-  }
+}
+.responsive-map {
+	position: relative;
+	height: 0;
+	padding-bottom: 75%; /* 450/600 */
+}
+
+.responsive-map iframe {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
+}

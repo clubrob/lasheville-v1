@@ -42,6 +42,18 @@
 .mt {
 	margin-top: var(--flow-space);
 }
+.mt-l {
+	margin-top: var(--size-700);
+}
+.mt-xl {
+	margin-top: var(--size-900);
+}
+.mb-l {
+	margin-bottom: var(--size-700);
+}
+.mb-xl {
+	margin-bottom: var(--size-900);
+}
 .py {
 	padding-top: var(--flow-space);
 	padding-bottom: var(--flow-space);

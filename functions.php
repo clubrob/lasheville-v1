@@ -123,11 +123,6 @@ if (!function_exists('lasheville_v1_setup')):
 				'color' => '#C2C0BF',
 			),
 			array(
-				'name' => __( 'dark gray', 'lasheville-v1' ),
-				'slug' => 'dark-gray',
-				'color' => '#565E66',
-			),
-			array(
 				'name' => __( 'white', 'lasheville-v1' ),
 				'slug' => 'white',
 				'color' => '#fff',
@@ -152,6 +147,11 @@ if (!function_exists('lasheville_v1_setup')):
 				'name' => __( 'Regular', 'lasheville-v1' ),
 				'size' => 16,
 				'slug' => 'regular'
+			),
+			array(
+				'name' => __( 'Medium', 'lasheville-v1' ),
+				'size' => 20,
+				'slug' => 'medium'
 			),
 			array(
 				'name' => __( 'Large', 'lasheville-v1' ),

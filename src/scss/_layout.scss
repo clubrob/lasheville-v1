@@ -54,6 +54,30 @@ body {
 		}
 	}
 }
+.preparation-grid {
+	padding: 0 !important;
+	> div {
+		margin-left: 0;
+		margin-right: 0;
+		width: 100vw;
+		max-width: 100vw;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		gap: var(--size-400);
+		grid-auto-flow: column dense;
+		div:nth-child(-n + 2) > div {
+			padding-left: var(--size-900);
+		}
+		div:nth-child(n + 3):nth-child(-n + 4) > div {
+			padding-right: var(--size-900);
+		}
+		.wp-block-group {
+			margin: 0 !important;
+			padding: var(--size-400);
+		}
+	}
+}
 
 .site-footer {
 	background-color: var(--color-gray);

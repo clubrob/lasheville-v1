@@ -65,6 +65,9 @@ h6 {
 .has-regular-font-size {
 	font-size: var(--size-400);
 }
+.has-medium-font-size {
+	font-size: var(--size-500);
+}
 .has-large-font-size {
 	font-size: var(--size-700);
 }

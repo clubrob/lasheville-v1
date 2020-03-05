@@ -29,11 +29,11 @@
 			<div class="footer-nav">
 				<ul class="footer-nav-left font-style-heading text-uppercase">
 					<li><a href="<?php echo get_site_url() ?>">Home</a></li>
-					<li><a href="<?php echo get_site_url() ?>/services">Services</a></li>
+					<li><a href="<?php echo get_site_url() ?>/services-for-eyelash-extensions">Services</a></li>
 					<li><a href="<?php echo get_site_url() ?>/about">About</a></li>
 				</ul>
 				<ul class="footer-nav-right font-style-heading text-uppercase">
-					<li><a href="<?php echo get_site_url() ?>/faq">FAQ</a></li>
+					<li><a href="<?php echo get_site_url() ?>/facts-and-information-on-eyelash-extensions">FAQ</a></li>
 					<li><a href="<?php echo get_site_url() ?>/contact">Contact</a></li>
 					<li><a href="<?php echo get_site_url() ?>/testimonials">Testimonials</a></li>
 				</ul>
