@@ -46,7 +46,6 @@
 					<li><a href="https://www.instagram.com/lashevilleextensions/"><img src="<?php echo get_template_directory_uri() ?>/assets/images/icons/instagram-icon.svg" alt="Instagram"></a></li>
 					<li><a href="https://www.facebook.com/Lasheville?fref=ts"><img src="<?php echo get_template_directory_uri() ?>/assets/images/icons/facebook-icon.svg" alt="Facebook"></a></li>
 					<li><a href="https://www.pinterest.com/umamojo1/"><img src="<?php echo get_template_directory_uri() ?>/assets/images/icons/pinterest-icon.svg" alt="Pinterest"></a></li>
-					<li><a href=""><img src="<?php echo get_template_directory_uri() ?>/assets/images/icons/email-icon.svg" alt="Email"></a></li>
 				</ul>
 			</div>
 		</div>

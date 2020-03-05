@@ -133,7 +133,7 @@
 		position: relative;
 		margin: 0 auto;
 		width: 100%;
-		transition:300ms;
+		transition: 300ms;
 			.jetpack-testimonial-shortcode {
 				position: relative;
 				overflow: visible;
@@ -150,7 +150,7 @@
 					visibility: hidden;
 					padding: 0 2.5rem;
 					z-index: 0;
-					&.active { // this is how we transition the slides in/out
+					&.active {
 						opacity: 1;
 						visibility: visible;
 					}
@@ -165,34 +165,67 @@
 				align-items: center;
 				position: absolute;
 				left: 0;
-				top: 1.5rem;
+				top: 0;
 				width: 100%;
+				height: 100%;
 				list-style: none;
 				padding: 0;
 				margin: 0;
 				z-index: 0;
 				li {
-				button {
-					cursor: pointer;
-					background: transparent;
-					border: 0;
-					svg {
-					width: 1.5rem;
-					height: 1.5rem;
+					height: 100%;
+					margin-top: 0;
+					button {
+						cursor: pointer;
+						background: transparent;
+						border: 0;
+						height: 100%;
+						svg {
+							width: var(--size-700);
+							height: var(--size-700);
+						}
 					}
 				}
-				}
 				#prev-slide, #next-slide {
-				padding: 0;
+					padding: 0;
 				}
 			}
 		}
 	}
 }
+
+.testimonials-page-block {
+	margin-top: var(--size-900);
+	.testimonial-entry {
+		border-bottom: 1px solid var(--color-gray);
+		padding-bottom: var(--size-500);
+		margin-bottom: var(--size-500);
+		font-size: var(--size-500);
+		.testimonial-entry-content {
+			margin-bottom: 0;
+		}
+		.testimonial-entry-title {
+			font-size: var(--size-400);
+			a {
+				display: inline;
+				font-family: var(--font-heading);
+				color: var(--color-secondary);
+			}
+		}
+		.testimonial-entry-title::first-letter {
+			display: none;
+		}
+	}
+	.testimonial-entry:last-child {
+		border-bottom: 0;
+	}
+}
+
+/* Google Maps Block */
 .responsive-map {
 	position: relative;
 	height: 0;
-	padding-bottom: 75%; /* 450/600 */
+	padding-bottom: 45%;
 }
 
 .responsive-map iframe {
@@ -202,4 +235,120 @@
 	left: 0;
 	width: 100% !important;
 	height: 100% !important;
+}
+
+/* FAQ Block */
+.wp-block-yoast-faq-block {
+	margin-top: var(--size-900);
+	.schema-faq-section {
+		padding-bottom: var(--size-500);
+		border-bottom: 1px solid var(--color-gray);
+		.schema-faq-question {
+			font-family: var(--font-heading);
+			font-size: var(--size-500);
+		}
+	}
+	.schema-faq-section:last-child {
+		border-bottom: 0;
+	}
+}
+
+/* WP Columns override */
+
+.wp-block-columns {
+	flex-wrap: wrap;
+}
+.wp-block-column {
+	flex-basis: 100% !important;
+}
+.wp-block-column:nth-child(2n) {
+	margin-left: 0;
+}
+@media (min-width: 48rem) {
+	.wp-block-columns {
+		flex-wrap: nowrap;
+	}
+	.wp-block-column:nth-child(2n) {
+		margin-left: 2rem;
+	}
+}
+
+/* Services Page */
+.services-menu-list {
+	li {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		width: 100%;
+		font-size: var(--size-400);
+		&:before {
+			content: '';
+			display: block;
+			border-bottom: 2px dotted var(--color-gray);
+			flex: 1;
+			order: 1;
+			margin-bottom: 6px;
+		}
+		strong:first-of-type {
+			order: 0;
+		}
+		strong:last-of-type {
+			margin-top: 0;
+			order: 2;
+		}
+	}
+}
+.facial-menu-item {
+	> div {
+		h5 {
+			font-weight: 700;
+			margin-bottom: 0;
+		}
+		p {
+			font-size: var(--size-400);
+		}
+		p:first-of-type {
+			margin-top: 0;
+		}
+	}
+}
+.preparation-grid {
+	padding: 0 !important;
+	> div {
+		margin-left: 0;
+		margin-right: 0;
+		width: 100vw;
+		max-width: 100vw;
+		> div {
+			padding-left: var(--flow-space);
+			padding-right: var(--flow-space);
+			padding-top: var(--flow-space);
+			padding-bottom: var(--flow-space);
+		}
+	}
+}
+@media (min-width: 64rem) {
+	.preparation-grid {
+		> div {
+			margin-left: 0;
+			margin-right: 0;
+			width: 100vw;
+			max-width: 100vw;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			gap: var(--size-400);
+			grid-auto-flow: column dense;
+			div:nth-child(-n + 2) > div {
+				padding-left: var(--size-900);
+			}
+			div:nth-child(n + 3):nth-child(-n + 4) > div {
+				padding-right: var(--size-900);
+			}
+			.wp-block-group {
+				margin: 0 !important;
+				padding: var(--size-400);
+			}
+		}
+	}
 }

@@ -98,11 +98,6 @@ if (!function_exists('lasheville_v1_setup')):
 				'color' => '#426d80',
 			),
 			array(
-				'name' => __( 'dark secondary', 'lasheville-v1' ),
-				'slug' => 'dark-secondary',
-				'color' => '#556471',
-			),
-			array(
 				'name' => __( 'light', 'lasheville-v1' ),
 				'slug' => 'light',
 				'color' => '#e8e1d4',
@@ -208,8 +203,8 @@ function lasheville_v1_widgets_init()
         'name' => esc_html__('Feature Banner', 'lasheville-v1'),
         'id' => 'topbanner-1',
         'description' => esc_html__('Add widgets here.', 'lasheville-v1'),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget' => '</section>',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
         'before_title' => '<h2 class="widget-title">',
         'after_title' => '</h2>',
     ));
@@ -224,6 +219,8 @@ function lasheville_v1_scripts()
     wp_enqueue_style('lasheville-v1-style', get_stylesheet_uri());
 
 	wp_enqueue_style('lasheville-v1-theme', get_template_directory_uri() . '/theme.css');
+
+	wp_enqueue_script('lasheville-v1-main', get_template_directory_uri() . '/js/main.js', array(), '20151215', true);
 
     wp_enqueue_script('lasheville-v1-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true);
 

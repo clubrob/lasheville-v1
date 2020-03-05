@@ -12,6 +12,6 @@ if ( ! is_active_sidebar( 'topbanner-1' ) ) {
 }
 ?>
 
-<aside id="secondary" class="widget-area top-banner">
+<aside id="topBanner" class="widget-area top-banner">
 	<?php dynamic_sidebar( 'topbanner-1' ); ?>
 </aside><!-- #secondary -->
