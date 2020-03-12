@@ -9,6 +9,9 @@ body {
 body.no-sidebar {
 	padding-top: 5rem;
 }
+#wpadminbar {
+    position: fixed;
+}
 .site-wrap {
 	max-width: 75rem;
 	margin: 0 auto;

@@ -270,3 +270,70 @@ require get_template_directory() . '/inc/customizer.php';
 if (defined('JETPACK__VERSION')) {
     require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Custom Shortcodes
+ */
+function jetpack_testimonials_with_pagination( $atts ) {
+	$args = array(
+		'order' => 'asc',
+		'orderby' => 'menu_order,date',
+		'posts_per_page' => 10,
+		'post_type' => 'jetpack-testimonial',
+		'paged' => get_query_var('paged') ? get_query_var('paged') : 1
+	);
+	$wp_query = new WP_Query($args);
+
+	ob_start();
+	if ( $wp_query->have_posts()) {
+		?>
+	<div class="testimonial-page-block">
+		<ul>
+			<?php
+			while ( $wp_query->have_posts() ) {
+				$wp_query->the_post();
+				$post_id = get_the_ID();
+				?>
+				<li class="testimonial-entry">
+					<div class="testimonial-entry-content">
+						<?php the_content(); ?>
+					</div>
+					<h4 class="testimonial-entry-title">
+						<?php the_title(); ?>
+					</h4>
+				</li>
+			<?php
+			}
+			?>
+		</ul>
+	</div>
+	<div class="custom-pagination">
+		<?php
+			echo paginate_links( array(
+				'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
+				'total'        => $wp_query->max_num_pages,
+				'current'      => max( 1, get_query_var( 'paged' ) ),
+				'format'       => '?paged=%#%',
+				'show_all'     => false,
+				'type'         => 'plain',
+				'end_size'     => 2,
+				'mid_size'     => 1,
+				'prev_next'    => true,
+				'prev_text'    => sprintf( '<i></i> %1$s', __( '< Newer', 'text-domain' ) ),
+				'next_text'    => sprintf( '%1$s <i></i>', __( 'Older >', 'text-domain' ) ),
+				'add_args'     => false,
+				'add_fragment' => '',
+			) );
+			wp_reset_query();
+		?>
+	</div>
+	<?php
+	} else { ?>
+		<p><em><?= 'Your Testimonial Archive currently has no entries. You can start creating them on your dashboard.' ?></p></em>
+	<?php
+	}
+
+	$html = ob_get_clean();
+	return $html;
+}
+add_shortcode('testimonials-paged', 'jetpack_testimonials_with_pagination');
