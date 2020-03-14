@@ -2,33 +2,47 @@
 	display: flex;
 	justify-content: space-around;
 	align-items: flex-end;
+	flex-wrap: wrap;
 	width: 100%;
 	> * + * {
 		margin-top: 0;
 	}
 	> * {
 		display: block;
-		padding: .5rem 1.5rem;
+		padding: 0 .2rem;
+	}
+	> a, > span {
+		font-family: var(--font-heading);
+		font-weight: 700;
+		text-decoration: none;
+		text-transform: uppercase;
 	}
 	> a {
-		border-radius: .5rem;
-		text-decoration: none;
-		color: var(--color-white);
-		background-color: var(--color-primary);
-		font-family: var(--font-heading);
-		text-transform: uppercase;
-		font-weight: 700;
-		transition: background 200ms;
-		&:hover {
-			background-color: hsl(182.9, 41.1, 41.4);
-		}
+		color: var(--color-primary);
 	}
 	> span {
-		border-radius: .5rem;
-		font-family: var(--font-heading);
-		text-transform: uppercase;
-		font-weight: 700;
-		background-color: var(--color-gray);
-		color: var(--color-white);
+		color: var(--color-gray);
+	}
+}
+@media (min-width: 64rem) {
+	.custom-pagination {
+		> * {
+			padding: .5rem 1.5rem;
+		}
+		> a, > span {
+			border-radius: .5rem;
+		}
+		> a {
+			color: var(--color-white);
+			background-color: var(--color-primary);
+			transition: background 200ms;
+			&:hover {
+				background-color: hsl(182.9, 41.1, 41.4);
+			}
+		}
+		> span {
+			background-color: var(--color-gray);
+			color: var(--color-white);
+		}
 	}
 }
