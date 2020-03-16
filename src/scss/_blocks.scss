@@ -130,10 +130,10 @@
 	}
 	.testimonials-block-slider {
 		> div {
-		position: relative;
-		margin: 0 auto;
-		width: 100%;
-		transition: 300ms;
+			position: relative;
+			margin: 0 auto;
+			width: 100%;
+			transition: 300ms;
 			.jetpack-testimonial-shortcode {
 				position: relative;
 				overflow: visible;
@@ -143,7 +143,7 @@
 					top: 0;
 					left: 0;
 					right: 0;
-					margin:0 auto;
+					margin: 0 auto;
 					transition: 300ms;
 					text-align: center;
 					opacity: 0;
@@ -186,7 +186,8 @@
 						}
 					}
 				}
-				#prev-slide, #next-slide {
+				#prev-slide,
+				#next-slide {
 					padding: 0;
 				}
 			}
@@ -373,10 +374,10 @@
 #sb_instagram .sb_instagram_header {
 	.sbi_header_text.sbi_no_bio h3 {
 		font-size: var(--size-500);
-		padding-top: 0!important;
+		padding-top: 0 !important;
 	}
 	a {
-	color: var(--color-white);
+		color: var(--color-white);
 	}
 }
 #sb_instagram .sbi_follow_btn {
@@ -391,5 +392,76 @@
 }
 #sb_instagram .sbi_follow_btn a:focus,
 #sb_instagram .sbi_follow_btn a:hover {
-    box-shadow: unset;
+	box-shadow: unset;
 }
+
+/* Home Hero Fader */
+
+.home-hero-block {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 600px;
+	height: 100%;
+	> div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 1;
+			background-color: rgba(0,0,0, 0.2);
+		}
+		.home-heroes {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: -1;
+			.blocks-gallery-item {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				width: 100%;
+				opacity: 0;
+				margin: 0;
+				transition: all 500ms ease-in-out;
+				figure img {
+					display: block;
+					object-fit: cover;
+					object-position: center 30%;
+					height: 100%;
+					width: 100%;
+				}
+			}
+			.blocks-gallery-item.show {
+				opacity: 1;
+				transition: opacity 500ms ease-in-out;
+			}
+		}
+		.home-hero-content {
+			position: relative;
+			z-index: 2;
+			padding: 1.25rem;
+			h1 {
+				color: white;
+				font-weight: 700;
+				padding: 1rem;
+				font-size: 1.15rem;
+				text-align: center;
+				white-space: nowrap;
+			}
+		}
+	}
+}
+

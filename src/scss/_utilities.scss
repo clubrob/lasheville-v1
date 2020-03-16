@@ -51,12 +51,15 @@
 .mb-xl {
 	margin-bottom: var(--size-900);
 }
+.mt-0 {
+	margin-top: 0 !important;
+}
+.p-0 {
+	padding: 0 !important;
+}
 .py {
 	padding-top: var(--flow-space);
 	padding-bottom: var(--flow-space);
-}
-.mt-0 {
-	margin-top: 0 !important;
 }
 @media (min-width: 48rem) {
 	.mt-md-0 {
@@ -93,4 +96,7 @@
 }
 .graph-400 {
 	font-size: var(--size-400);
+}
+.opacity-0 {
+	opacity: 0 !important;
 }

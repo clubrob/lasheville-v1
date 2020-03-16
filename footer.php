@@ -17,7 +17,7 @@
 		<div class="footer-wrap">
 			<div class="footer-info">
 				<p>
-					<a href="" class="button">Book Now</a>
+					<a href="https://www.vagaro.com/lasheville" class="button">Book Now</a>
 				</p>
 				<p class="m-0">
 					<?php echo date('Y'); ?> Copyright Lasheville, All Rights Reserved.
