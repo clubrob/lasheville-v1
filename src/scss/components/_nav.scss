@@ -175,7 +175,7 @@ li#menu-item-3099 {
 				font-size: var(--size-400);
 				text-transform: uppercase;
 				font-weight: 700;
-				border-radius: .5rem;
+				border-radius: 0;
 				border: 2px solid transparent;
 				transition: all 200ms;
 				width: unset;
@@ -218,35 +218,4 @@ li#menu-item-3099 {
 			}
 		}
 	}
-	// .menu-main-menu-container {
-	// 	position: static;
-	// 	top: unset;
-	// 	left: unset;
-	// 	z-index: unset;
-	// 	width: auto;
-	// 	height: auto;
-	// 	transition: unset;
-	// 	ul.nav-menu {
-	// 		flex-direction: row;
-	// 		align-items: center;
-	// 		li.menu-item {
-	// 			display: inline-block;
-	// 			a {
-	// 				display: block;
-	// 				padding: .2rem 1.5rem;
-	// 				margin-right: 0.5rem;
-	// 				background: transparent;
-	// 				font-size: 0.8rem;
-	// 				border-radius: .5rem;
-	// 				border: 2px solid transparent;
-	// 				transition: all 200ms;
-	// 				&:hover {
-	// 					color: var(--color-white);
-	// 					background-color: var(--color-primary);
-	// 				}
-	// 			}
-	// 		}
-
-	// 	}
-	// }
 }

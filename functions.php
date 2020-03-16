@@ -319,8 +319,8 @@ function jetpack_testimonials_with_pagination( $atts ) {
 				'end_size'     => 2,
 				'mid_size'     => 1,
 				'prev_next'    => true,
-				'prev_text'    => sprintf( '<i></i> %1$s', __( '< Newer', 'text-domain' ) ),
-				'next_text'    => sprintf( '%1$s <i></i>', __( 'Older >', 'text-domain' ) ),
+				'prev_text'    => sprintf( '<i></i> %1$s', __( '<', 'text-domain' ) ),
+				'next_text'    => sprintf( '%1$s <i></i>', __( '>', 'text-domain' ) ),
 				'add_args'     => false,
 				'add_fragment' => '',
 			) );
